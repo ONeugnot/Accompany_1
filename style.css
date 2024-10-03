@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Kavivanar&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100dvh;
+}
+
+main {
+	display: flex;
+	background-color: black;
+	height: 100%;
+	width: 35%;
+	padding: 3rem;
+	border-radius: 20px;
+	gap: 10px 0;
+	flex-direction: column;
+}
+
+.box-1 {
+	display: flex;
+	background-color: #d9d9d9;
+	height: 15%;
+	border-radius: 10px;
+	justify-content: space-between;
+	font-family: "Kavivanar", cursive;
+}
+
+.h1-1 {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.h1-box1 {
+	font-size: 66px;
+    border: 7px dashed black;
+    padding: 15px;
+	font-weight: 900;
+}
+.h2 {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.h2-box1 {
+	font-weight: 100;
+	font-size: 45px;
+	font-weight: 500;
+}
+
+.p {
+	display: flex;
+	align-items: center;
+}
+
+.p-1 {
+	font-size: 36px;
+}
+
+.image {
+	border: 5px solid #d9d9d9;
+    margin: 50px 0 0 0  ;
+}
+
+.img{
+    width: 100%;
+}
+
+.box-3{
+    display: flex;
+    background-color: #d9d9d9;
+    height: 80%;
+    width: 100%;
+    background: rgb(0,45,222);
+    background: linear-gradient(90deg, rgba(0,45,222,1) 0%, rgba(0,132,168,1) 27%, rgba(0,0,0,1) 39%, rgba(0,7,87,1) 48%, rgba(0,0,0,1) 62%, rgba(0,132,168,1) 69%, rgba(0,45,222,1) 100%);
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 0 0;
+
+}
+
+.text-1{
+	padding: 22px;
+    font-size:30px;
+    height: 90%;
+    width: 90%;
+    font-family: "Kavivanar", cursive;
+    font-weight: 800;
+    background-color: #d9d9d9;
+    border: 20px solid black;
+    border-radius: 20px;
+}
+
+#btn{
+	display: flex;
+	justify-content: end;
+	width:	30%;
+	height: 30%;
+	float: right;
+	flex-direction: column;
+	gap: 12px ;
+}
+
+#btn button{
+	height: 40%;
+	border-radius: 20px;
+	font-family: "Kavivanar", cursive;
+	font-weight: 900;
+	background-color: transparent;
+	font-size: 20px;
+}
+
+
