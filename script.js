@@ -1,46 +1,3 @@
-function createCard(cardElement) {
-	const main = document.querySelector("main");
-	const section = document.createElement("section");
-	const head = document.createElement("div");
-	const divdash1 = document.createElement("div");
-	const span1 = document.createElement("span");
-	const pTitle = document.createElement("p");
-	const span2 = document.createElement("span");
-	const divdash2 = document.createElement("div");
-	const divImg = document.createElement("div");
-	const ImgCard = document.createElement("img");
-	const DivBotom = document.createElement("div");
-	const borderBot = document.createElement("div");
-	const pBootom = document.createElement("p");
-
-	section.classList = "card";
-	head.classList = "header-card";
-	divdash1.classList = "border-dash";
-	divdash2.classList = "border-dash";
-	divImg.classList = "border-img";
-	DivBotom.classList = "bottom-card";
-	borderBot.classList = "border-multi";
-
-	pTitle.textContent = cardElement.name;
-	span1.textContent = cardElement.number;
-	span2.textContent = cardElement.rank;
-	ImgCard.src = cardElement.image;
-	pBootom.textContent = cardElement.description;
-
-	main.appendChild(section);
-	section.appendChild(head);
-	head.appendChild(divdash1);
-	divdash1.appendChild(span1);
-	divdash2.appendChild(span2);
-	head.appendChild(pTitle);
-	head.appendChild(divdash2);
-	section.appendChild(divImg);
-	divImg.appendChild(ImgCard);
-	section.appendChild(DivBotom);
-	DivBotom.appendChild(borderBot);
-	borderBot.appendChild(pBootom);
-}
-
 const cards = [
 	{
 		image: "assets/000.png",
@@ -841,301 +798,112 @@ const cards = [
 		description:
 			"An endangered species. Very neat and loves to cook, each has a hobby such as sewing or gardening. They are excellent at taking care of human children.",
 	},
-	{
-		image: "assets/100.png",
-		number: "100",
-		name: "Map of the Island 'empty'",
-		rank: "G-400",
-		description:
-			"A map of the island. No towns or markers are currently shown. The user will automatically fill these in on their travels.",
-	},
-	{
-		image: "assets/101.png",
-		number: "101",
-		name: "Map of the Island 'detailed'",
-		rank: "D-70",
-		description:
-			"A detailed map of the island, with all towns and markers already shown.",
-	},
-	{
-		image: "assets/102.png",
-		number: "102",
-		name: "Voucher",
-		rank: "SS-150",
-		description:
-			"A special voucher which transforms into the card Angel's Breath once one becomes available.",
-	},
-	{
-		image: "assets/110.png",
-		number: "110",
-		name: "Ruler's Invitation",
-		rank: "SS-1",
-		description:
-			"A letter which extends a warm invitation to visit the game's capital city, Limeiro. A visit to this city's castle is also included.",
-	},
-	{
-		image: "assets/163.png",
-		number: "163",
-		name: "Sick Villagers",
-		rank: "F-150",
-		description: "These villagers are very sick.",
-	},
-	{
-		image: "assets/263.png",
-		number: "263",
-		name: "Healthy Villagers",
-		rank: "C-50",
-		description: "These villagers are as healthy as can be!",
-	},
-	{
-		image: "assets/266.png",
-		number: "266",
-		name: "Transport Ticket",
-		rank: "B-150",
-		description:
-			"A ticket that allows the bearer to use a safe passage out of the game.",
-	},
-	{
-		image: "assets/572.png",
-		number: "572",
-		name: "Giant Cyclops",
-		rank: "G-333",
-		description:
-			"These one-eyed giants are the largest of all Cyclops. They travel in small groups and attack anything within their territory.",
-	},
-	{
-		image: "assets/585.png",
-		number: "585",
-		name: "Bubble Horse",
-		rank: "C-50",
-		description:
-			"This hard-to-catch creature emits bubbles when threatened as a diversionary tactic. White bubbles will burst in contact with Aura. Red ones will burst with everything else except Aura.",
-	},
-	{
-		image: "assets/598.png",
-		number: "598",
-		name: "Chief of Wolf Pack",
-		rank: "C-45",
-		description: "The leader of a wolf pack that attacks travelers.",
-	},
-	{
-		image: "assets/607.png",
-		number: "607",
-		name: "J10,000",
-		rank: "H-∞",
-		description: "10,000  in card form.",
-	},
-	{
-		image: "assets/673.png",
-		number: "673",
-		name: "Hyper Puffball",
-		rank: "D-80",
-		description:
-			"This little creature is a fast fellow. They are a really fast, hard-to-catch species.",
-	},
-	{
-		image: "assets/697.png",
-		number: "697",
-		name: "Melanin Lizard",
-		rank: "E-100",
-		description: "A very large lizard big enough to eat a cow whole.",
-	},
-	{
-		image: "assets/711.png",
-		number: "711",
-		name: "Radio Rat",
-		rank: "H-800",
-		description:
-			"These hard-to-catch creatures use aura to control a suit of armor. As a defensive measure, it uses this armor to mislead a target into thinking the armor is the enemy whilst the true creature can escape.",
-	},
-	{
-		image: "assets/1217.png",
-		number: "1217",
-		name: "Galgaida",
-		rank: "F-185",
-		description: "This fish when cooked, tastes delicious.",
-	},
-	{
-		image: "assets/7018.png",
-		number: "7018",
-		name: "Chidon",
-		rank: "C-?",
-		description: "A fish. Debut in Chapter 172.",
-	},
-	{
-		image: "assets/14170.png",
-		number: "14170",
-		name: "Gasoline",
-		rank: "H-∞",
-		description:
-			"A vial containing gasoline. This flammable substance will catch fire easily.",
-	},
-	{
-		image: "assets/21449.png",
-		number: "21449",
-		name: "Rock",
-		rank: "H-∞",
-		description: "A simple rock. Quite hard and can be any size.",
-	},
-	{
-		image: "assets/25008.png",
-		number: "25008",
-		name: "Large Rock",
-		rank: "H-∞",
-		description: "A large rock.",
-	},
-	{
-		image: "assets/1001.png",
-		number: "1001",
-		name: "Peek",
-		rank: "LR ¦ RS",
-		description:
-			"View contents of target player's (previously met) free slots.",
-	},
-	{
-		image: "assets/E-120.png",
-		number: "E-120",
-		name: "",
-		rank: "",
-		description: "1005",
-	},
-	{
-		image: "assets/1006.png",
-		number: "1006",
-		name: "Pickpocket",
-		rank: "SR ¦ AS",
-		description: "Steals a random card from target player's free pocket.",
-	},
-	{
-		image: "assets/Trade.png",
-		number: "Trade",
-		name: "SR ¦ AS",
-		rank: "Swaps a card the caster's owns to a target player's card randomly.",
-		description: "E-100",
-	},
-	{
-		image: "assets/G-380.png",
-		number: "G-380",
-		name: "",
-		rank: "",
-		description: "1010",
-	},
-	{
-		image: "assets/1011.png",
-		number: "1011",
-		name: "Clone",
-		rank: "SR ¦ RS",
-		description:
-			'Change into one random card from target player\'s imposed slots (if the opponent has no imposed slot cards or the card limit was at MAX, the transformation fails and "Clone" disappears).',
-	},
-	{
-		image: "assets/Origin.png",
-		number: "Origin",
-		name: "SR ¦ RS",
-		rank: "Make target player fly to the game starting point.",
-		description: "D-65",
-	},
-	{
-		image: "assets/1016.png",
-		number: "1016",
-		name: "Drift",
-		rank: "SR ¦ RS",
-		description:
-			"Go to a random unvisited town. If all towns have been visited, player stays at the same place and the card disappears.",
-	},
-	{
-		image: "assets/Levy.png",
-		number: "Levy",
-		name: "SR ¦ RS",
-		rank: "Take one random card from each player within a 20m radius.",
-		description: "B-25",
-	},
-	{
-		image: "assets/F-200.png",
-		number: "F-200",
-		name: "",
-		rank: "",
-		description: "1020",
-	},
-	{
-		image: "assets/1021.png",
-		number: "1021",
-		name: "Mug",
-		rank: "SR ¦ AS",
-		description: "Take one card at will from target player.",
-	},
-	{
-		image: "assets/Compromise.png",
-		number: "Compromise",
-		name: "SR ¦ AS",
-		rank: "Choose and destroy one above-A ranked card from target player. That player then obtains a card of 3 ranks lower than the destroyed card and of the number of his choosing. If target player has no above-A card, “Compromise” changes into card form again and returns to the caster. (If the designated card of three ranks lower has attained the card copy limit, it cannot be obtained.)",
-		description: "B-25",
-	},
-	{
-		image: "assets/D-80.png",
-		number: "D-80",
-		name: "",
-		rank: "",
-		description: "1025",
-	},
-	{
-		image: "assets/1026.png",
-		number: "1026",
-		name: "Holy Water",
-		rank: "SR ¦ DS ¦ C",
-		description:
-			"Protects the player ten times from attack spells from other players. This card is immune to steal and destruction spells.",
-	},
-	{
-		image: "assets/B-25.png",
-		number: "B-25",
-		name: "",
-		rank: "",
-		description: "1030",
-	},
-	{
-		image: "assets/1031.png",
-		number: "1031",
-		name: "Analysis",
-		rank: "LR ¦ RS",
-		description:
-			"Show explanation on card of the chosen number (not available to No. 000).",
-	},
-	{
-		image: "assets/Cling.png",
-		number: "Cling",
-		name: "SR ¦ AS",
-		rank: "Complete data of one player's restricted slots will be available at all times. (Effect lasts until player leaves the game.)",
-		description: "C-50",
-	},
-	{
-		image: "assets/D-55.png",
-		number: "D-55",
-		name: "",
-		rank: "",
-		description: "1035",
-	},
-	{
-		image: "assets/1036.png",
-		number: "1036",
-		name: "Eye of God",
-		rank: "LR ¦ C",
-		description:
-			'Caster permanently obtains the effects of "List" and "Analysis" on all cards from No. 000 to 099. (Effect lasts until target player leaves the game.)',
-	},
-	{
-		image: "assets/List.png",
-		number: "List",
-		name: "LR ¦ RS",
-		rank: "Reveals the number of people in possession of the target card as well as the total number of copies.",
-		description: "G-350",
-	},
-	{
-		image: "assets/F-130.png",
-		number: "F-130",
-		name: "",
-		rank: "",
-		description: "1040",
-	},
 ];
-cards.forEach(createCard);
+
+const main = document.querySelector("main");
+
+function createCard(cardElement) {
+	const section = document.createElement("section");
+	const head = document.createElement("div");
+	const divdash1 = document.createElement("div");
+	const span1 = document.createElement("span");
+	const pTitle = document.createElement("p");
+	const span2 = document.createElement("span");
+	const divdash2 = document.createElement("div");
+	const divImg = document.createElement("div");
+	const ImgCard = document.createElement("img");
+	const DivBotom = document.createElement("div");
+	const borderBot = document.createElement("div");
+	const pBootom = document.createElement("p");
+
+	section.classList = "card";
+	head.classList = "header-card";
+	divdash1.classList = "border-dash";
+	divdash2.classList = "border-dash";
+	divImg.classList = "border-img";
+	DivBotom.classList = "bottom-card";
+	borderBot.classList = "border-multi";
+
+	pTitle.textContent = cardElement.name;
+	span1.textContent = cardElement.number;
+	span2.textContent = cardElement.rank;
+	ImgCard.src = cardElement.image;
+	pBootom.textContent = cardElement.description;
+
+	section.appendChild(head);
+	head.appendChild(divdash1);
+	divdash1.appendChild(span1);
+	divdash2.appendChild(span2);
+	head.appendChild(pTitle);
+	head.appendChild(divdash2);
+	section.appendChild(divImg);
+	divImg.appendChild(ImgCard);
+	section.appendChild(DivBotom);
+	DivBotom.appendChild(borderBot);
+	borderBot.appendChild(pBootom);
+
+	return section;
+}
+
+function filtre() {
+	const input = document.querySelector(".inputVal");
+	let value = "";
+	let tab = [];
+	let tab2 = [];
+	let tabNom = [];
+	input.addEventListener("input", () => {
+		value = input.value;
+		if (value === "SS") {
+			const main = document.querySelector("main");
+			main.innerHTML = "";
+			tab2 = [];
+			const SSword = cards.filter(
+				(letter) => letter.rank[0] && letter.rank[1] === "S"
+			);
+
+			tab = tab.concat(SSword);
+			console.log(tab);
+
+			tab.forEach((card) => {
+				const elem = createCard(card);
+				main.appendChild(elem);
+			});
+		} else if (value !== "SS" && value !== "S") {
+			document.body.appendChild(main);
+			cards.forEach((card) => {
+				const elem = createCard(card);
+
+				main.appendChild(elem);
+			});
+
+			tab = [];
+			tab2 = [];
+		} else if (value === "S") {
+			const jsp = document.querySelector("main");
+			jsp.innerHTML = "";
+			tab = [];
+			const Sword = cards.filter((letter) => letter.rank[0] === "S");
+
+			tab2 = tab2.concat(Sword);
+			console.log(tab2);
+
+			tab2.forEach((car) => {
+				const element = createCard(car);
+				main.appendChild(element);
+			});
+		}
+	});
+}
+filtre();
+
+let arrayS = [];
+let arraySS = [];
+const btnAll = document.getElementById("btnAll");
+const btnSS = document.getElementById("btnSS");
+const btnS = document.getElementById("btnS");
+
+cards.forEach((card) => {
+	const elem = createCard(card);
+
+	main.appendChild(elem);
+});

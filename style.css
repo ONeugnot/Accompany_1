@@ -8,11 +8,10 @@
 
 body {
 	display: flex;
-	align-items: center;
-	justify-content: center;
 	flex-direction: column;
 	height: 100vh;
 	gap: 40px;
+	padding: 50px;
 }
 
 main {
@@ -28,7 +27,7 @@ main {
 .card {
 	display: flex;
 	flex-direction: column;
-	width: 80%;
+	width: 100%;
 	background-color: #000000;
 	padding: 10px;
 	height: 62%;
@@ -38,13 +37,8 @@ main {
 .title {
 	display: flex;
 	flex-direction: column;
+	width: 100%;
 	gap: 20px;
-}
-
-hr {
-	background-color: #343434;
-	height: 12px;
-	border-radius: 999px;
 }
 
 .header-card {
@@ -57,6 +51,7 @@ hr {
 .border-dash {
 	border: 2px dashed #000000;
 	padding: 15px;
+	height: 100%;
 }
 
 .border-img {
@@ -93,6 +88,27 @@ img {
 	background-color: #d9d9d9;
 	font-size: 12px;
 	border-radius: 7px;
+}
+.top-head {
+	display: flex;
+	justify-content: space-between;
+}
+
+.btn {
+	padding: 10px;
+	border-radius: 99999999999999999999999px;
+	border: none;
+	background-color: #2a2e2f;
+	color: white;
+	font-size: 16px;
+	font-weight: 400;
+}
+.active {
+	background-color: #cc527e;
+}
+input {
+	padding: 10px;
+	border-radius: 10px;
 }
 
 @media screen and (min-width: 720px) {
